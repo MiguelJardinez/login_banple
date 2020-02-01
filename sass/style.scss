@@ -1,4 +1,21 @@
+//tipografia lato y ubuntu
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Ubuntu:500&display=swap');
+
 //Colores
 $degradado-principal: linear-gradient(to bottom right, #30CFD0, #001E6B); 
 $color-principal: #001E6B; 
 $color-facebook: #3B5998; 
+$color-texto: #C2C3C5;
+
+//Tamaño de letra
+$principal-size: 1.2em; 
+
+//Tipografia 
+$principal-font: 'Lato', sans-serif;
+
+//mixin de letras placeholder
+@mixin placeholder($color, $size, $font){
+    color: $color-texto;
+    font-size: $principal-size;
+    font-family: $principal-font;
+}
