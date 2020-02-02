@@ -13,6 +13,10 @@ figure, p {
   padding: 0;
 }
 
+.responsive {
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -27,6 +31,8 @@ section {
   height: 100vh;
   width: 100vw;
   background-image: url("../src/toronto_image.png");
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 section .overlay {
@@ -81,7 +87,7 @@ section article {
   font-size: 1.2rem;
 }
 .background-color img {
-  width: 200px;
+  width: 250px;
 }
 
 .background-login {
@@ -109,7 +115,7 @@ section article {
 }
 .background-login .google p {
   color: #b9b9b9;
-  font-size: 1.2rem;
+  font-size: 1.3em;
   font-weight: 600;
 }
 .background-login .facebook {
