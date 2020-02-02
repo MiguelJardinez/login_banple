@@ -43,6 +43,9 @@ figure, p{
     margin: 0;
     padding: 0;
 }
+.responsive{
+    display: none;
+}
 .container{
     display: flex;
     align-items: center;
@@ -107,7 +110,7 @@ section{
     }
     background: $degradado-principal;
     & img{
-        width: 200px;
+        width: 250px;
     }
 }
 
@@ -135,7 +138,7 @@ section{
     .google{
         border: solid 1.5px $color-texto;
         & p{
-            @include font($color: $color-texto, $size: 1.2rem);
+            @include font($color: $color-texto, $size: 1.3em);
             font-weight: 600;
         }
     }
