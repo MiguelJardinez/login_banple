@@ -5,14 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 <body>
     
-    <section class="background">
+    <section class="background-image">
         <div class="overlay"></div>
-        <p>Hola mundo</p>
+        <div class="container">
+            <div class="row card-login">
+                <article class="background-color col-4">
+                    <div class="row">
+                        <div class="info-banple">
+                            <figure class="logo">
+                                <img src="./src/logo-banple.png" alt="Logo banple">
+                                <div class="origin">
+                                    <p>reinventing banking</p>
+                                </div>
+                            </figure>
+                            <div class="details">
+                                <p>All the movements you need, inside your pocket</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="background-login col-5">
+                    <div class="row">
+                        <div class="facebook">
+                            <a href="" class="btn-facebook row">
+                                <figure class="col-2">
+                                    <img src="./src/facebook-icon.png" alt="" class="google-img">
+                                </figure>
+                                <p class="sign-google  col">Sign in with Facebook</p>
+                            </a>
+                        </div>
+                        <div class="google">
+                            <a href="" class="btn-google row">
+                                <figure class="col-2">
+                                    <img src="./src/google-icon.png" alt="" class="google-img">
+                                </figure>
+                                <p class="sign-google col">Sign in with google</p>
+                            </a>
+                        </div>
+                        <div class="or-login">
+                            <p class="col-12 d-flex justify-content-center">or</p>
+                            <div class="login-form col">
+                                <div class="email">
+                                    <input type="text" placeholder="EMAIL ADDRESS" autocomplete="email">
+                                </div>
+                                <div class="password">
+                                    <input type="text" placeholder="PASSWORD" autocomplete="new-password">
+                                </div>
+                                <div class="settings-login">
+                                    <div class="forget-password col-6">
+                                        <a href=""><p>forget password?</p></a>
+                                    </div>
+                                </div>
+                                <button>Sign In</button>
+                                <label for="">Keep me signed in until I sign out</label>
+                                <div class="no-member">
+                                    <p>No member yet?<a href=""> Sign Now</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

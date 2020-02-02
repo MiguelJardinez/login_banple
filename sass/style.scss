@@ -2,24 +2,56 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Ubuntu:500&display=swap');
 
 //Colores
-$degradado-principal: linear-gradient(to bottom right, #30CFD0, #001E6B); 
+$degradado-principal: linear-gradient(120deg, #30CFD0, #330867); 
 $color-principal: #001E6B; 
+$color-overlay: rgba(12, 34, 87, 0.3);
 $color-facebook: #3B5998; 
-$color-texto: #C2C3C5;
+$color-texto-placeholder: #C2C3C5;
+$color-texto: #b9b9b9; 
+$color-texto-secundario: #707070;
+$color-white: #fff;
 
 //Tamaño de letra
-$principal-size: 1.2em; 
+$principal-font-size: 1.2em; 
 
 //Tipografia 
 $principal-font: 'Lato', sans-serif;
 
-//mixin de letras placeholder
-@mixin placeholder($color, $size, $font){
-    color: $color-texto;
-    font-size: $principal-size;
-    font-family: $principal-font;
-}
+//tamaños de botones e inputs
+$full: 100%;
 
+//mixin de letras placeholder, overlays
+@mixin font($color, $size){
+    color: $color;
+    font-size: $size;
+}
+@mixin overlay($posision, $top, $bottom, $left, $right){
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+::placeholder{
+    opacity: 0.6;
+    font-weight: 600;
+}
+a{
+    color: $color-principal;
+}
+figure, p{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    & .card-login{
+        justify-content: center;
+    }
+}
 section{
     height: 100vh;
     width: 100vw;
@@ -27,15 +59,146 @@ section{
     position: relative;
 
     & .overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0,0,0, 0.5);
+        @include overlay($posision: absolute, $top: 0, $bottom: 0, $left: 0, $right: 0);
+        background-color: $color-overlay;
         background-position: center;
         background-repeat: no-repeat;
         background-size: unset;
-        z-index: 2;
+    } 
+    & article{
+        padding: 1rem;
+    }
+
+}
+
+.background-color{
+    border-radius: 0.7rem 0 0 0.7rem;
+    & > .row{
+        height: 100%;
+        align-items: center;
+    }
+    .info-banple{
+        width: 100%;
+        text-align: center;
+        color: white;
+        & .logo{
+            margin: 2rem 0;
+            position: relative;
+            & p{
+                @include font($color: $color-white,$size: 0.8rem);
+            }
+            & ::before{
+                content: "";
+                position: absolute;
+                bottom: calc(0% - 15px);
+                height: 3px;
+                width: 90%;
+                left: calc(50% - 170px);
+                background: $color-white;
+            }
+        }
+        & .details{
+            text-align: start;
+            padding: 0 1rem;
+            @include font($color: $color-white,$size: 1.2rem )
+        }
+    }
+    background: $degradado-principal;
+    & img{
+        width: 200px;
+    }
+}
+
+.background-login{
+    background-color: $color-white;
+    border-radius: 0 0.7rem 0.7rem 0;
+
+    .facebook, .google{
+        width: $full;
+        margin: 0.3rem 1rem;
+        height: 50px; 
+        border-radius: 0.3rem;
+        & a{
+            height: inherit;
+            align-items: center;
+            outline: none;
+            text-decoration: none;
+        }
+        & figure{ 
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+    .google{
+        border: solid 1.5px $color-texto;
+        & p{
+            @include font($color: $color-texto, $size: 1.2rem);
+            font-weight: 600;
+        }
+    }
+
+    .facebook{
+        background: $color-facebook;
+        & p{
+            @include font($color: white, $size: 1.2rem);
+            font-weight: 600;
+        }
+    }
+    .login-form{
+        button{
+            background: $degradado-principal;
+            @include font($color: $color-white, $size:1rem );
+            outline: none;
+            border: none;
+        }
+        input, button{
+            width: $full;
+            margin: 0.3rem 0;
+            height: 50px;
+            padding: 0 1rem;
+        }
+        & label{
+            @include font($color: $color-texto-secundario, $size: 0.9rem);
+        }
+        & .no-member{
+            display: flex;
+            justify-content: center;
+            @include font($color: $color-texto-secundario, $size: 1rem);
+        }
+    }
+    .or-login{
+        width: 100%;
+        & > p{
+            @include font($color: $color-texto, $size: 1.3rem );
+            position: relative;
+        }
+
+        & > p::before{
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background: $color-texto;
+            left: calc(0% + 1rem);
+            bottom: calc(50% - 4px);
+        }
+        & > p::after{
+            content: "";
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background: $color-texto;
+            right: calc(0% + 1rem);
+            bottom: calc(50% - 4px);
+        }
+        .forget-password{
+            padding: 0;
+            margin: 0.7rem 0;
+            & a{     
+                color: $color-principal;
+                font-weight: 400;
+            }
+        }
     }
 }

@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Ubuntu:500&display=swap");
+::placeholder {
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+a {
+  color: #001E6B;
+}
+
+figure, p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.container .card-login {
+  justify-content: center;
+}
+
 section {
   height: 100vh;
   width: 100vw;
@@ -8,14 +32,150 @@ section {
 section .overlay {
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(12, 34, 87, 0.3);
   background-position: center;
   background-repeat: no-repeat;
   background-size: unset;
-  z-index: 2;
+}
+section article {
+  padding: 1rem;
+}
+
+.background-color {
+  border-radius: 0.7rem 0 0 0.7rem;
+  background: linear-gradient(120deg, #30CFD0, #330867);
+}
+.background-color > .row {
+  height: 100%;
+  align-items: center;
+}
+.background-color .info-banple {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.background-color .info-banple .logo {
+  margin: 2rem 0;
+  position: relative;
+}
+.background-color .info-banple .logo p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.background-color .info-banple .logo ::before {
+  content: "";
+  position: absolute;
+  bottom: calc(0% - 15px);
+  height: 3px;
+  width: 90%;
+  left: calc(50% - 170px);
+  background: #fff;
+}
+.background-color .info-banple .details {
+  text-align: start;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.background-color img {
+  width: 200px;
+}
+
+.background-login {
+  background-color: #fff;
+  border-radius: 0 0.7rem 0.7rem 0;
+}
+.background-login .facebook, .background-login .google {
+  width: 100%;
+  margin: 0.3rem 1rem;
+  height: 50px;
+  border-radius: 0.3rem;
+}
+.background-login .facebook a, .background-login .google a {
+  height: inherit;
+  align-items: center;
+  outline: none;
+  text-decoration: none;
+}
+.background-login .facebook figure, .background-login .google figure {
+  justify-content: center;
+  display: flex;
+}
+.background-login .google {
+  border: solid 1.5px #b9b9b9;
+}
+.background-login .google p {
+  color: #b9b9b9;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.background-login .facebook {
+  background: #3B5998;
+}
+.background-login .facebook p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.background-login .login-form button {
+  background: linear-gradient(120deg, #30CFD0, #330867);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+.background-login .login-form input, .background-login .login-form button {
+  width: 100%;
+  margin: 0.3rem 0;
+  height: 50px;
+  padding: 0 1rem;
+}
+.background-login .login-form label {
+  color: #707070;
+  font-size: 0.9rem;
+}
+.background-login .login-form .no-member {
+  display: flex;
+  justify-content: center;
+  color: #707070;
+  font-size: 1rem;
+}
+.background-login .or-login {
+  width: 100%;
+}
+.background-login .or-login > p {
+  color: #b9b9b9;
+  font-size: 1.3rem;
+  position: relative;
+}
+.background-login .or-login > p::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  background: #b9b9b9;
+  left: calc(0% + 1rem);
+  bottom: calc(50% - 4px);
+}
+.background-login .or-login > p::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 2px;
+  background: #b9b9b9;
+  right: calc(0% + 1rem);
+  bottom: calc(50% - 4px);
+}
+.background-login .or-login .forget-password {
+  padding: 0;
+  margin: 0.7rem 0;
+}
+.background-login .or-login .forget-password a {
+  color: #001E6B;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
