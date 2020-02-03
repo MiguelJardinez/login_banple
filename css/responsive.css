@@ -74,7 +74,10 @@
     }
 }
 
-@media(max-width: 419px) {
+@media(max-width: 419px) {  
+    .forget, .background-login{
+        height: 73vh;
+    }
     .forget{
         height: 60vh;
     }
@@ -91,7 +94,7 @@
         height: auto;
     }
     .background-image{
-        height: 120vh;
+        height: 105vh;
     }
     .responsive{
         display: block;
