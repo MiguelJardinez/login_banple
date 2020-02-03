@@ -95,6 +95,7 @@
     }
     .background-image{
         height: 105vh;
+        background-size: cover;
     }
     .responsive{
         display: block;
