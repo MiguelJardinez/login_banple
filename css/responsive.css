@@ -1,9 +1,43 @@
-@media(min-width: 420px) and (max-width: 764px){
+@media(max-width: 1920px){
+    .container .card-login{
+        height: 55vh;
+    }
+}
+@media(max-width: 1400px){
+    .container .card-login{
+        height: 85vh !important;
+    }
+    .info-banple .logo ::before{
+        width: 90% !important;
+        left: calc(50% - 166px) !important;
+    }
+}
+@media(max-width: 1199px){
+    .info-banple .logo ::before{
+        width: 80% !important;
+        left: calc(50% - 126px) !important;
+    }
+}
+@media(max-width: 991px){
+    .card-login{
+        height: 85vh !important;
+    }
+    .info-banple .logo ::before{
+        width: 90% !important;
+        left: calc(50% - 129px) !important;
+    }
+
+    .details{
+        font-size: 1rem !important;
+    }
+}
+
+@media(max-width: 768px){
     .forget, .background-login{
-        height: 80vh;
+        height: 85vh;
     }
     .login-form .email-forget{
-        padding-bottom: 5rem;
+        padding-bottom: 4rem;
     }
     .container{
         height: auto;
@@ -19,6 +53,9 @@
         z-index: 2;
         color: white;
         text-align: center;
+    }
+    .responsive img{
+        width: 250px;
     }
     .background-color{
         display: none;
@@ -37,9 +74,9 @@
     }
 }
 
-@media(min-width: 320px) and (max-width: 419px){
+@media(max-width: 419px) {
     .forget{
-        height: 90vh;
+        height: 60vh;
     }
     .info-password p{
         font-size: 0.8rem;
@@ -65,6 +102,9 @@
         color: white;
         text-align: center;
     }
+    .responsive img{
+        width: 250px;
+    }
     .background-login {
         border-radius: 0.7rem;
         margin: 10rem 0 2rem;
@@ -83,5 +123,11 @@
     /*pagina de reseteo de contraseña*/
     .password-repet{
         margin-bottom: 4rem;
+    }
+}
+
+@media(max-width: 321px) {
+    .google p,.facebook p{
+        font-size: 0.9rem !important;
     }
 }
