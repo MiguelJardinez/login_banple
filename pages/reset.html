@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <title>Forget password</title>
+    <title>Reset Password</title>
 </head>
 <body>
 
@@ -39,10 +39,10 @@
                     </div>
                 </article>
 
-                <article class="background-login forget col-10 col-md-5">
+                <article class="background-login forget reset col-10 col-md-5">
                     <div class="row">
                         <div class="title-password col-md-12">
-                            <h5>Don't Worry, Reset your password</h5>
+                            <h5>Write Your new password</h5>
                         </div>
 
                         <div class="info-password col-md-12">
@@ -50,14 +50,15 @@
                         </div>
                         <div class="or-login">
                             <div class="login-form col">
-                                <div class="email-forget">
-                                    <input type="text" placeholder="EMAIL ADDRESS" autocomplete="email">
+                                <div class="password-reset">
+                                    <input type="text" placeholder="NEW PASSWORD" autocomplete="new-password">
                                 </div>
-                                <form action="./reset.html" method="GET">
-                                    <button type="submit">RESET PASSWORD</button>
-                                </form><div class="no-member">
-                                    <p>No member yet?<a href=""> Sign Now</a></p>
+                                <div class="password-repet">
+                                    <input type="text" placeholder="REPET NEW PASSWORD" autocomplete="new-password">
                                 </div>
+                                <form action="./confirm_password.html" method="GET">
+                                    <button type="submit">CONFIRM PASSWORD</button>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,15 @@
 @media(min-width: 420px) and (max-width: 764px){
+    .forget, .background-login{
+        height: 80vh;
+    }
+    .login-form .email-forget{
+        padding-bottom: 5rem;
+    }
     .container{
         height: auto;
     }
     .background-image{
-        height: auto;
+        height: 120vh;
     }
     .responsive{
         display: block;
@@ -24,9 +30,23 @@
     .login-form input{
         margin: 0.8rem 0;
     }
+
+    /*pagina de reseteo de contraseña*/
+    .password-repet{
+        margin-bottom:4rem;
+    }
 }
 
 @media(min-width: 320px) and (max-width: 419px){
+    .forget{
+        height: 90vh;
+    }
+    .info-password p{
+        font-size: 0.8rem;
+    }
+    .login-form .email-forget{
+        padding-bottom: 4rem;
+    }
     .background-color{
         display: none;
     }
@@ -34,7 +54,7 @@
         height: auto;
     }
     .background-image{
-        height: auto;
+        height: 120vh;
     }
     .responsive{
         display: block;
@@ -58,5 +78,10 @@
     }
     .or-login p::before, .or-login p::after{
         width: 35% !important;
+    }
+
+    /*pagina de reseteo de contraseña*/
+    .password-repet{
+        margin-bottom: 4rem;
     }
 }
